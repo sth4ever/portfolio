@@ -193,8 +193,9 @@ export default function AuthorLayout({ children, frontMatter }) {
             <br />
             <h1>About this site</h1>
             <p>
-              Welcome to my home on the internet. This site functions as a blog/portfolio, a place
-              to share code and thoughts. Opinions are my own.
+              Welcome to my personal blog where I share my musings. I am a Senior Full Stack
+              Developer passionate about JavaScript, TypeScript, Python, Ruby, building pipelines
+              and Automation.
             </p>
             <p>
               I learnt how to build this site from the most awesome people in the community:

@@ -6,21 +6,9 @@ import Image from '@/components/Image'
 import ViewCounter from '@/components/ViewCounter'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  EmailShareButton,
-  LinkedinShareButton,
-  RedditShareButton,
-  WhatsappShareButton,
-} from 'react-share'
-import { SocialIcon } from 'react-social-icons'
 import { HiOutlinePencil, HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 import { BsCalendarDate } from 'react-icons/bs'
-
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -94,30 +82,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       <dl className="whitespace-nowrap text-sm font-medium leading-5">
                         <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                        <dt className="sr-only">Twitter</dt>
-                        <dd>
-                          {author.twitter && (
-                            <Link
-                              href={author.twitter}
-                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                            >
-                              {author.twitter.replace('https://twitter.com/', '@')}
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                className="ml-0.5 inline-block h-4 w-4 fill-current"
-                              >
-                                <g data-name="Layer 2">
-                                  <g data-name="external-link">
-                                    <rect width="24" height="24" opacity="0" />
-                                    <path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z" />
-                                    <path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z" />
-                                  </g>
-                                </g>
-                              </svg>
-                            </Link>
-                          )}
-                        </dd>
                       </dl>
                     </li>
                   ))}
@@ -126,100 +90,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
-              <div className="grid place-items-center pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <div className="flex items-center space-x-4">
-                  <TwitterShareButton
-                    url={postUrl}
-                    title={title}
-                    via={siteMetadata.socialAccount.twitter}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#1da1f2] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="twitter"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#1da1f2"
-                    />
-                  </TwitterShareButton>
-                  <FacebookShareButton
-                    url={postUrl}
-                    quote={title}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#1877f2] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="facebook"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#1877f2"
-                    />
-                  </FacebookShareButton>
-                  <EmailShareButton
-                    body={'Check out this blog'}
-                    subject={title}
-                    separator=" : "
-                    url={postUrl}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#B61AC1] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="email"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#B61AC1"
-                    />
-                  </EmailShareButton>
-                  <LinkedinShareButton
-                    summary={'Check out this blog'}
-                    title={title}
-                    source={siteMetadata.siteUrl}
-                    url={postUrl}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#0072b1] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="linkedin"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#0072b1"
-                    />
-                  </LinkedinShareButton>
-                  <RedditShareButton
-                    title={title}
-                    url={postUrl}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#ff4500] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="reddit"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#ff4500"
-                    />
-                  </RedditShareButton>
-                  <WhatsappShareButton
-                    title={title}
-                    separator={' : '}
-                    url={postUrl}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#25D366] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="whatsapp"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#25D366"
-                    />
-                  </WhatsappShareButton>
-                  <Link
-                    href={editUrl(fileName)}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#5A6272] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="github"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#5A6272"
-                    />
-                  </Link>
-                </div>
-              </div>
-              <Comments frontMatter={frontMatter} />
             </div>
             <footer>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
