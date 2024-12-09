@@ -9,14 +9,14 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
           <div className="my-2">
             <FolderIcon />
           </div>
-          <div className="flex flex-row justify-between">
+          {/* <div className="flex flex-row justify-between">
             <div className="mx-1.5">
               {href ? <SocialIcon kind="external" href={href} size="6" /> : null}
             </div>
             <div className="mx-1.5">
               {github ? <SocialIcon kind="github" href={github} size="6" /> : null}
             </div>
-          </div>
+          </div> */}
         </div>
         <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">{title}</h2>
 
