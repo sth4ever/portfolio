@@ -44,18 +44,6 @@ export default function AuthorLayout({ children, frontMatter }) {
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
-            <div className="flex flex-col pt-3">
-              <a
-                className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth"
-                data-screen-name="@_ParthDesai_"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <AiOutlineTwitter className="mr-2 mb-0.5 inline h-5 w-5" />
-                Say Hi!
-              </a>
-            </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
             <p>
@@ -67,24 +55,15 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building data pipelines and automating them at{' '}
+                {text1} Currently, I am focused on building several full-stack web applications from
+                scratch at{' '}
                 <Link
-                  href={'https://www.accenture.com/in-en'}
+                  href={'https://www.accenture.com'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
                   Accenture
                 </Link>
               </RoughNotation>
-            </p>
-            <br />
-            <p>
-              This is what I am doing right{' '}
-              <Link
-                href={'/now'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                now
-              </Link>
             </p>
             <br />
             <p className="sm:block md:hidden lg:hidden">
@@ -94,18 +73,6 @@ export default function AuthorLayout({ children, frontMatter }) {
                 {' '}
                 Natural Language Processing and Machine Learning.{' '}
               </span>
-              At the same time I am{' '}
-              <RoughNotation
-                type="underline"
-                show={true}
-                color="#FBCFE8"
-                animationDelay={1500}
-                animationDuration={3000}
-                multiline={true}
-              >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science.
-              </RoughNotation>
             </p>
             <p className="hidden md:block">
               I am always looking to learn new things. I am currently working on a few projects
@@ -122,79 +89,18 @@ export default function AuthorLayout({ children, frontMatter }) {
                   Natural Language Processing and Machine Learning.{' '}
                 </span>
               </RoughNotation>
-              At the same time I am{' '}
-              <RoughNotation
-                type="underline"
-                show={true}
-                color="#FBCFE8"
-                animationDelay={1500}
-                animationDuration={3000}
-                multiline={true}
-              >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science
-              </RoughNotation>
             </p>
             <br />
             <p>
               I am a strong advocate for open source and I am always interested in working on new
-              projects with new people. Feel free to reach out if you have anything to talk about,
-              you can reach me through{' '}
-              <Link
-                href={'mailto:desaiparth2000@gmail.com'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                Mail
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="ml-0.5 inline-block h-4 w-4 fill-current"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="external-link">
-                      <rect width="24" height="24" opacity="0" />
-                      <path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z" />
-                      <path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z" />
-                    </g>
-                  </g>
-                </svg>
-              </Link>{' '}
-              or{' '}
-              <Link
-                href={'https://api.whatsapp.com/send?phone=916358190818&text=hi'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                Whatsapp
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="ml-0.5 inline-block h-4 w-4 fill-current"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="external-link">
-                      <rect width="24" height="24" opacity="0" />
-                      <path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z" />
-                      <path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z" />
-                    </g>
-                  </g>
-                </svg>
-              </Link>
-            </p>
-            <br />
-            <p>
-              <Link
-                href={'/uses'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                Here
-              </Link>{' '}
-              you can see what I use on daily basis
+              projects with new people. Feel free to reach out if you have anything to talk about.
             </p>
             <br />
             <h1>About this site</h1>
             <p>
-              Welcome to my home on the internet. This site functions as a blog/portfolio, a place
-              to share code and thoughts. Opinions are my own.
+              Welcome to my personal blog where I share my musings. I am a Senior Full Stack
+              Developer passionate about JavaScript, TypeScript, Python, Ruby, building pipelines
+              and Automation.
             </p>
             <p>
               I learnt how to build this site from the most awesome people in the community:

@@ -1,29 +1,29 @@
 const experienceData = [
   {
-    title: 'Data Engineering Intern',
+    title: 'Senior Software Engineer',
     company: 'Accenture',
-    location: 'Ahmedabad, India',
-    range: 'January 2022 - May 2022',
-    url: 'https://www.accenture.com/gr-en/about/consulting-index',
+    location: 'Miami, Florida',
+    range: 'November 2020 - November 2024',
+    url: 'https://accenture.com',
     text1:
-      'Helped with the digital transformation of BOAT by working on their platform called ByteETL.',
+      'Worked together with cross-functional teams to define project requirements and deliver scalable solutions on time, enhancing overall project efficiency by 20%.',
     text2:
-      'Built the encryption component for the platform using Scala and Spark which included 2 encoding functionalities : ENCRYPT and HASH.',
+      'Enhanced API performance by optimizing GraphQL and RESTful endpoints, resulting in a 25% increase in data retrieval speed and improved user experience.',
     text3:
-      'Created JSON wrappers for the encryption components and automated and triggered the pipelines to run at specific intervals using CronJob.',
+      'Coached summer interns increasing engagement by 25% through a launched mentorship program.',
   },
   {
-    title: 'Software Engineer Analytics',
-    company: 'HOPS Healthcare',
-    location: 'Ahmedabad, India',
-    range: 'March 2021 - June 2021',
-    url: 'https://hops.healthcare/',
+    title: 'Full Stack Developer',
+    company: 'MobiDev',
+    location: 'Norcross, Georgia',
+    range: 'November 2016 - November 2020',
+    url: 'https://mobidev.biz',
     text1:
-      'Guided by Mr. Vivek Patel, to create a pipeline that extracts essential information from informal conversations.',
+      'Developed in an Agile environment, participating in sprint planning, stand-up meetings, and retrospectives to ensure smooth project execution and timely delivery.',
     text2:
-      'Worked on creating a web app for their healthcare system for doctors to analyze and save reports.',
+      'Enhanced user interface designs for 10 projects by collaborating effectively with UI/UX designers and using front-end technologies.',
     text3:
-      'Developed functions for automatically extracting important elements from reports using BioBERT and Regex.',
+      'Collaborated with 10 cross-functional team members to gather requirements and delivered robust software solutions.',
   },
 ]
 
